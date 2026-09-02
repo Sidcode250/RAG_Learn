@@ -26,6 +26,7 @@ def parse_html(file_path: str):
             text_clean = '\n'.join(chunk for chunk in chunks if chunk)
             
             return text_clean
+        
         except Exception as e:
             logfire.error(f"❌ HTML Parse Failed: {e}")
             raise e
